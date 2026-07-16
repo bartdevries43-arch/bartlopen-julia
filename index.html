@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Op naar de marathon (Julia) · bartlopen</title>
-    <meta name="description" content="Julia's 14-weken marathonschema richting Amsterdam (18 okt): opbouw, marathontempo, planning, voortgang en badges." />
+    <meta name="description" content="Julia's 14-weken marathonschema richting Amsterdam (18 okt): 3 loopdagen, full-body kracht, pilates, herstel en voortgang." />
     <meta name="theme-color" content="#0b0c10" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="bartlopen Run Coach" />
     <meta property="og:title" content="Op naar de marathon, voor Julia" />
-    <meta property="og:description" content="14-weken opbouw richting de marathon van Amsterdam, met coaching, planning en voortgang. Van @bartlopen." />
+    <meta property="og:description" content="14-weken opbouw richting de marathon van Amsterdam met 3 loopdagen, kracht, pilates, coaching en voortgang. Van @bartlopen." />
     <meta property="og:url" content="https://bartdevries43-arch.github.io/bartlopen-julia/" />
     <meta property="og:image" content="https://bartdevries43-arch.github.io/bartlopen-julia/bartlopen-runcoach.png" />
     <meta property="og:image:secure_url" content="https://bartdevries43-arch.github.io/bartlopen-julia/bartlopen-runcoach.png" />
@@ -24,7 +24,7 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Op naar de marathon" />
-    <link rel="stylesheet" href="styles.css?v=1" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
     <div id="splash" class="splash" aria-hidden="true">
@@ -82,10 +82,59 @@
             <div class="stat-tile"><span class="stat-val" data-count="0" id="statDone">0</span><span class="stat-label">trainingen</span></div>
             <div class="stat-tile"><span class="stat-val" data-count="0" data-suffix=" km" id="statKm">0</span><span class="stat-label">gelopen</span></div>
             <div class="stat-tile"><span class="stat-val" data-count="0" id="statStreak">0</span><span class="stat-label">reeks 🔥</span></div>
-            <div class="stat-tile"><span class="stat-val" id="statWeek">0/4</span><span class="stat-label">deze week</span></div>
+            <div class="stat-tile"><span class="stat-val" id="statWeek">0/3</span><span class="stat-label">looptrainingen</span></div>
           </section>
 
           <section class="nextup reveal" id="nextUp"></section>
+
+          <section class="panel strength-plan reveal" id="strengthPlan">
+            <div class="strength-head">
+              <div>
+                <p class="section-kicker">Jouw vaste weekritme</p>
+                <h3>3× lopen · 1× kracht · 1× pilates</h3>
+                <p>De lange duurloop staat op zaterdag. Donderdag en vrijdag blijven bewust rustig, zodat je met frisse benen aan je belangrijkste training begint.</p>
+              </div>
+              <span class="strength-time">60–90 min</span>
+            </div>
+
+            <div class="rhythm-summary" aria-label="Vaste weekindeling">
+              <span><strong>Ma</strong> 🏃‍♀️ rustig</span>
+              <span><strong>Di</strong> 💪 full-body</span>
+              <span><strong>Wo</strong> ⚡ kwaliteit</span>
+              <span><strong>Do</strong> 🌿 herstel</span>
+              <span><strong>Vr</strong> 😴 rust</span>
+              <span><strong>Za</strong> 🏃‍♀️ lange duur</span>
+              <span><strong>Zo</strong> 🧘‍♀️ pilates</span>
+            </div>
+
+            <details class="strength-details" open>
+              <summary>Dinsdag · full-body voor hardlopers</summary>
+              <p class="strength-intro">Train technisch netjes op RPE 6–7: stop steeds met ongeveer twee herhalingen over. Neem 60–90 seconden rust tussen de sets.</p>
+              <div class="strength-blocks">
+                <article>
+                  <span>01 · 8–10 min</span>
+                  <h4>Warming-up</h4>
+                  <ul><li>5 min rustig fietsen of roeien</li><li>Heupen, enkels en bovenrug losmaken</li><li>2 lichte opwarmsets voor de squat</li></ul>
+                </article>
+                <article>
+                  <span>02 · 3 rondes</span>
+                  <h4>Benen &amp; loopkracht</h4>
+                  <ul><li>Goblet squat of leg press · 8–10</li><li>Dumbbell Romanian deadlift · 8–10</li><li>Standing calf raise · 12–15</li></ul>
+                </article>
+                <article>
+                  <span>03 · 3 rondes</span>
+                  <h4>Bovenlichaam</h4>
+                  <ul><li>Dumbbell bench press of push-up · 8–12</li><li>Seated cable row · 10–12</li><li>Lat pulldown · 8–12</li></ul>
+                </article>
+                <article>
+                  <span>04 · 2–3 rondes</span>
+                  <h4>Stabiliteit &amp; core</h4>
+                  <ul><li>Split squat · 8 per been</li><li>Glute bridge of hip thrust · 10–12</li><li>Dead bug · 8 per kant</li><li>Side plank · 30–40 sec per kant</li></ul>
+                </article>
+              </div>
+              <p class="strength-note"><strong>Lichte week:</strong> doe 2 sets en gebruik minder gewicht. <strong>Raceweek:</strong> alleen 25–30 min mobiliteit, lichte core en activatie; geen spierpijn opzoeken.</p>
+            </details>
+          </section>
 
           <section class="panel planning-panel reveal" id="planningPanel">
             <div class="planning-head">
@@ -168,6 +217,6 @@
     </div>
 
     <div id="toast" class="toast" aria-live="polite"></div>
-    <script src="app.js?v=1"></script>
+    <script src="app.js?v=2"></script>
   </body>
 </html>

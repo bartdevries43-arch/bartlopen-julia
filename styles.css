@@ -1,5 +1,5 @@
 /* ================================================================== *
- *  Kim's Halve Marathon, Run Coach · stoer/sportief, Apple-style, mobiel-eerst
+ *  Julia's Marathon, Run Coach · stoer/sportief, Apple-style, mobiel-eerst
  * ================================================================== */
 :root {
   color-scheme: dark;
@@ -206,6 +206,43 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .planning-actions .btn-ghost { padding: 13px 16px; }
 .week-planning { display: flex; flex-wrap: wrap; gap: 6px; margin: -2px 0 11px; }
 .week-planning span { padding: 5px 9px; border: 1px solid color-mix(in srgb, var(--pastel-purple) 30%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--pastel-purple) 10%, transparent); color: var(--pastel-purple); font-size: 0.7rem; font-weight: 700; }
+
+/* ---------- Julia's vaste weekritme & krachtplan ---------- */
+.strength-plan {
+  overflow: hidden;
+  background:
+    radial-gradient(95% 150% at 100% 0%, color-mix(in srgb, var(--pastel-purple) 15%, transparent), transparent 58%),
+    linear-gradient(145deg, color-mix(in srgb, var(--pastel-blue) 7%, transparent), transparent 58%),
+    var(--card);
+}
+.strength-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.strength-head h3 { margin: 3px 0 7px; color: var(--pastel-purple); font-size: 1.28rem; }
+.strength-head p:not(.section-kicker) { margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
+.strength-time { flex: none; padding: 7px 11px; border: 1px solid color-mix(in srgb, var(--pastel-blue) 32%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--pastel-blue) 11%, transparent); color: var(--pastel-blue); font-size: 0.72rem; font-weight: 800; }
+.rhythm-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; margin: 16px 0; }
+.rhythm-summary span { min-width: 0; padding: 9px 7px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,0.025); color: var(--muted); font-size: 0.66rem; line-height: 1.25; text-align: center; }
+.rhythm-summary strong { display: block; margin-bottom: 3px; color: var(--ink); font-size: 0.7rem; }
+.strength-details { border-top: 1px solid var(--line); padding-top: 14px; }
+.strength-details summary { cursor: pointer; color: var(--pastel-pink); font-weight: 800; font-size: 0.92rem; }
+.strength-intro { margin: 11px 0 13px; color: var(--muted); font-size: 0.82rem; line-height: 1.5; }
+.strength-blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.strength-blocks article { padding: 13px; border: 1px solid var(--line); border-radius: 14px; background: var(--card-2); }
+.strength-blocks article > span { color: var(--pastel-blue); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.strength-blocks h4 { margin: 5px 0 8px; color: var(--ink); font-size: 0.88rem; }
+.strength-blocks ul { margin: 0; padding-left: 17px; color: var(--muted); }
+.strength-blocks li { margin-bottom: 5px; font-size: 0.74rem; line-height: 1.35; }
+.strength-note { margin: 11px 0 0; padding: 11px 12px; border-left: 3px solid var(--pastel-purple); border-radius: 9px; background: color-mix(in srgb, var(--pastel-purple) 8%, transparent); color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
+.strength-note strong { color: var(--pastel-purple); }
+
+.week-rhythm { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: -2px 0 12px; }
+.rhythm-day { position: relative; display: grid; grid-template-columns: auto auto 1fr; align-items: center; gap: 5px; min-width: 0; padding: 7px 8px; border: 1px solid var(--line); border-radius: 11px; background: rgba(255,255,255,0.025); }
+.rhythm-day strong { color: var(--ink); font-size: 0.64rem; }
+.rhythm-day > span { font-size: 0.82rem; }
+.rhythm-day small { overflow: hidden; color: var(--muted); font-size: 0.56rem; line-height: 1.15; text-overflow: ellipsis; white-space: nowrap; }
+.rhythm-day.rhythm-run { border-color: color-mix(in srgb, var(--pastel-blue) 25%, transparent); background: color-mix(in srgb, var(--pastel-blue) 6%, transparent); }
+.rhythm-day.rhythm-strength { border-color: color-mix(in srgb, var(--pastel-purple) 30%, transparent); background: color-mix(in srgb, var(--pastel-purple) 8%, transparent); }
+.rhythm-day.rhythm-pilates { border-color: color-mix(in srgb, var(--pastel-pink) 28%, transparent); background: color-mix(in srgb, var(--pastel-pink) 7%, transparent); }
+.rhythm-day.is-today { box-shadow: inset 0 0 0 1px var(--pastel-pink), 0 0 14px color-mix(in srgb, var(--pastel-pink) 13%, transparent); }
 
 /* ---------- Panels ---------- */
 .panel { padding: 18px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--card); margin-bottom: 18px; }
@@ -524,6 +561,14 @@ h1, h2, h3, h4, p { margin-top: 0; }
   .planning-icon { width: 38px; height: 38px; }
   .hero-subgoal { align-items: flex-start; flex-direction: column; }
   .hero-subgoal strong { text-align: left; }
+  .strength-head { flex-direction: column; }
+  .strength-blocks { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 520px) {
+  .rhythm-summary, .week-rhythm { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .rhythm-day { display: flex; flex-direction: column; gap: 2px; min-height: 64px; padding: 7px 4px; text-align: center; }
+  .rhythm-day small { width: 100%; }
 }
 
 /* Laptop & iPad: bredere, comfortabele layout */
@@ -568,7 +613,7 @@ h1, h2, h3, h4, p { margin-top: 0; }
   body.print-schema .stats-grid,
   body.print-schema .nextup,
   body.print-schema .planning-panel,
-  body.print-schema .panel,
+  body.print-schema .panel:not(.strength-plan),
   body.print-schema .jump-now,
   body.print-schema .badges,
   body.print-schema .info,
@@ -591,6 +636,22 @@ h1, h2, h3, h4, p { margin-top: 0; }
   body.print-schema .session-meta { color: #665b62; }
   body.print-schema .session.is-done .session-title { text-decoration: none; }
   body.print-schema .week-planning span { color: #18131a; }
+  body.print-schema .strength-plan { padding: 12px; border: 1px solid #d8d1d6; background: #fff; color: #18131a; box-shadow: none; break-inside: avoid; }
+  body.print-schema .strength-head h3,
+  body.print-schema .strength-details summary,
+  body.print-schema .strength-blocks h4,
+  body.print-schema .rhythm-summary strong,
+  body.print-schema .rhythm-day strong { color: #18131a; }
+  body.print-schema .strength-head p,
+  body.print-schema .strength-intro,
+  body.print-schema .strength-blocks li,
+  body.print-schema .strength-note,
+  body.print-schema .rhythm-summary span,
+  body.print-schema .rhythm-day small { color: #665b62; }
+  body.print-schema .strength-blocks article,
+  body.print-schema .rhythm-summary span,
+  body.print-schema .rhythm-day { border-color: #ddd4d9; background: #f6f2f4; }
+  body.print-schema .week-rhythm { grid-template-columns: repeat(7, 1fr); }
   body.print-schema .reveal { opacity: 1 !important; transform: none !important; }
 }
 

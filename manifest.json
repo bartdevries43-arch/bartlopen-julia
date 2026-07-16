@@ -1,7 +1,7 @@
 {
   "name": "Op naar de marathon (Julia) , bartlopen Run Coach",
   "short_name": "Op naar de marathon",
-  "description": "Julia's 14-weken marathonschema richting Amsterdam, met coaching, planning, stats en badges.",
+  "description": "Julia's 14-weken marathonschema richting Amsterdam met 3 loopdagen, kracht, pilates, coaching en voortgang.",
   "start_url": ".", "scope": ".", "display": "standalone", "orientation": "portrait",
   "background_color": "#0b0c10", "theme_color": "#0b0c10",
   "icons": [

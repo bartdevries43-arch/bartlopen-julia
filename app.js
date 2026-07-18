@@ -145,12 +145,12 @@ function weekRhythm(week) {
 const PLAN = [
   { week: 1, dates: "13–19 jul", phase: "Fase 1 · Basis leggen", sessions: [
     ma({ zone: "duur",  km: 6,  title: "6 km rustig",       goal: "Rustig aan het nieuwe weekritme wennen", blocks: ["6 km op 6:45–7:15/km", "Ontspannen, romp stevig"] }),
-    wo({ zone: "tempo", km: 7, title: "3×1 km tempo",      goal: "Drempel aanspreken",  blocks: ["2 km inlopen + 3 versnellingen", "3×1 km @ 5:40–6:00/km", "2 min dribbel ertussen", "1 km uitlopen"] }),
+    wo({ zone: "tempo", km: 7, title: "3×1 km tempo",      goal: "Drempel aanspreken",  blocks: ["2 km inlopen + 3 versnellingen", "3×1 km @ 5:40–6:00/km", "2×2 min rustig dribbelen tussen de blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 10, title: "10 km lang",       goal: "Vertrouwde lange duur", blocks: ["10 km op 6:50–7:20/km", "Rustig starten, sterk eindigen"] }),
   ]},
   { week: 2, dates: "20–26 jul", phase: "Fase 1 · Basis leggen", sessions: [
     ma({ zone: "duur",  km: 6,  title: "6 km rustig",       goal: "Herstel & volume", blocks: ["6 km op 6:45–7:15/km"] }),
-    wo({ zone: "tempo", km: 8, title: "4×1 km tempo",      goal: "Drempel uitbreiden", blocks: ["2 km inlopen", "4×1 km @ 5:40–6:00/km", "2 min dribbel ertussen", "1 km uitlopen"] }),
+    wo({ zone: "tempo", km: 8, title: "4×1 km tempo",      goal: "Drempel uitbreiden", blocks: ["2 km inlopen", "4×1 km @ 5:40–6:00/km", "3×2 min rustig dribbelen tussen de blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 12, title: "12 km lang",       goal: "Duur opbouwen", blocks: ["12 km op 6:50–7:20/km", "Drinken oefenen onderweg"] }),
   ]},
   { week: 3, dates: "27 jul–2 aug", phase: "Fase 1 · Basis leggen", sessions: [
@@ -165,7 +165,7 @@ const PLAN = [
   ]},
   { week: 5, dates: "10–16 aug", phase: "Fase 2 · Marathontempo erin", sessions: [
     ma({ zone: "duur",  km: 7,  title: "7 km rustig",       goal: "Volume", blocks: ["7 km op 6:45–7:15/km"] }),
-    wo({ zone: "tempo", km: 9, title: "2×2 km tempo",      goal: "Drempel verlengen", blocks: ["2 km inlopen", "2×2 km @ 5:45–6:00/km", "3 min dribbel ertussen", "1 km uitlopen"] }),
+    wo({ zone: "tempo", km: 9, title: "2×2 km tempo",      goal: "Drempel verlengen", blocks: ["2 km inlopen", "2×2 km @ 5:45–6:00/km", "3 min rustig dribbelen tussen de twee blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 16, title: "16 km lang",       goal: "Duur uitbreiden", blocks: ["16 km op 6:50–7:20/km", "Voeding oefenen: 1 gel rond 10 km"] }),
   ]},
   { week: 6, dates: "17–23 aug", phase: "Fase 2 · Marathontempo erin", sessions: [
@@ -185,12 +185,12 @@ const PLAN = [
   ]},
   { week: 9, dates: "7–13 sep", phase: "Fase 3 · Marathon-specifiek", sessions: [
     ma({ zone: "duur",  km: 8,  title: "8 km rustig",       goal: "Volume", blocks: ["8 km op 6:45–7:15/km"] }),
-    wo({ zone: "doel", km: 10, title: "3×3 km marathontempo", goal: "Racetempo herhalen", blocks: ["2 km inlopen", "3×3 km @ 6:00–6:30/km", "2 min dribbel ertussen", "1 km uitlopen"] }),
+    wo({ zone: "doel", km: 10, title: "3×3 km marathontempo", goal: "Racetempo herhalen", blocks: ["2 km inlopen", "3×3 km @ 6:00–6:30/km", "2×2 min rustig dribbelen tussen de blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 24, title: "24 km lang",       goal: "Lange duur, voeding testen", blocks: ["24 km op 6:50–7:20/km", "Halverwege 1 gel, ritme bewaken"] }),
   ]},
   { week: 10, dates: "14–20 sep", phase: "Fase 3 · Marathon-specifiek", sessions: [
     ma({ zone: "duur",  km: 8,  title: "8 km rustig",       goal: "Volume", blocks: ["8 km op 6:45–7:15/km"] }),
-    wo({ zone: "tempo", km: 11, title: "2×4 km tempo",     goal: "Drempel verlengen", blocks: ["2 km inlopen", "2×4 km @ 5:45–6:00/km", "3 min dribbel ertussen", "1 km uitlopen"] }),
+    wo({ zone: "tempo", km: 11, title: "2×4 km tempo",     goal: "Drempel verlengen", blocks: ["2 km inlopen", "2×4 km @ 5:45–6:00/km", "3 min rustig dribbelen tussen de twee blokken", "1 km uitlopen"] }),
     za({ zone: "doel",  km: 27, title: "27 km met 10 km MT", goal: "Sleutelloop, racevoeding", blocks: ["17 km op 6:50–7:20/km", "10 km @ marathontempo 6:00–6:30/km", "Voeding als op racedag"] }),
   ]},
   { week: 11, dates: "21–27 sep", phase: "Fase 3 · Marathon-specifiek", sessions: [
@@ -205,7 +205,7 @@ const PLAN = [
   ]},
   { week: 13, dates: "5–11 okt", phase: "Fase 4 · Taper & race", taper: true, sessions: [
     ma({ zone: "duur",  km: 7,  title: "7 km rustig",       goal: "Taper start", blocks: ["7 km op 6:45–7:15/km"] }),
-    wo({ zone: "tempo", km: 8, title: "3×1 km tempo",      goal: "Scherp & fris", blocks: ["2 km inlopen", "3×1 km @ 5:45/km", "2 min dribbel ertussen", "1 km uitlopen"] }),
+    wo({ zone: "tempo", km: 8, title: "3×1 km tempo",      goal: "Scherp & fris", blocks: ["2 km inlopen", "3×1 km @ 5:45/km", "2×2 min rustig dribbelen tussen de blokken", "1 km uitlopen"] }),
     za({ zone: "lang",  km: 15, title: "15 km soepel",     goal: "Laatste wat langere loop", blocks: ["15 km op 6:50–7:20/km"] }),
   ]},
   { week: 14, dates: "12–18 okt", phase: "Fase 4 · Taper & race", taper: true, race: true, sessions: [
